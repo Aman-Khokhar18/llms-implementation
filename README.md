@@ -99,3 +99,28 @@ torch.onnx.export(
     dynamic_axes={"input_ids": {0: "batch", 1: "sequence"}, "logits": {0: "batch", 1: "sequence"}},
 )
 print("Exported GPT model to gpt_model.onnx")
+```
+
+### 2. Optimize the ONNX model with TensorRT
+
+Once exported, you can optimize it with TensorRT, for example using `trtexec`:
+
+```bash
+trtexec \
+  --onnx=gpt_model.onnx \
+  --saveEngine=gpt_model_fp16.engine \
+  --fp16 \
+  --workspace=4096
+```
+
+## 🧠 Skills Demonstrated
+
+Across these projects and this portfolio repo:
+
+- Building **transformer-based language models in PyTorch** (GPT, LLaMA, encoder–decoder)
+- Working with **tokenization, datasets, and training pipelines** for NLP
+- Structuring models to be **deployment-ready** via **ONNX export** and **TensorRT optimization**
+- Writing **clear documentation** and **modular code** suitable for extension and experimentation
+
+
+
