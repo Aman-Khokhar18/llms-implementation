@@ -1,4 +1,4 @@
-# Transformer-based Language Models (PyTorch · ONNX · TensorRT-ready)
+# Transformer-based Language Models (PyTorch)
 
 This repository is a **portfolio hub** for my implementations of transformer-based language models in **PyTorch**
 
